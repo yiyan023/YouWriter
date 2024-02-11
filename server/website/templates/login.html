@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login | YouWriter</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            .login-form {
+                width: 560px;
+                background: #fff;
+                border-radius: 10px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                box-sizing: border-box;
+                display: block;
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-bottom: 55px;
+            }
+            .input-box {
+                font-family: "Inter", sans-serif;
+                line-height: 1;
+                font-size: 16px;
+                display: block;
+                width: 80%; /* Adjust the width to make it less wide */
+                margin: 0 auto; /* Center the input box horizontally */
+                background: none;
+                height: 30px;
+                padding: 10px;
+                border-radius: 20px;
+                margin-bottom: 20px;
+            }
+
+            .input-box:focus {
+                border-color: #0077b6;
+                outline: none;
+            }
+
+            .submit {
+                font-size: 16px;
+                color: #fff;
+                line-height: 1.2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 20px;
+                min-width: 150px;
+                height: 55px;
+                background-color: black;
+                border-radius: 27px;
+                margin: 0 auto;
+                border: none;
+            }
+
+            .submit:hover {
+                cursor: pointer;
+                background-color: #0077b6;
+                border: none;
+            }
+
+            .signup {
+                font-size: 13px;
+                color: #555;
+                line-height: 1.4;
+                margin: 0;
+                text-decoration: none;
+                background-color: transparent;
+                border: none;
+                padding: 0;
+                box-sizing: border-box;
+                position: fixed;
+                bottom: 20px;
+                right: 60px;
+            }
+
+            .no-account {
+                font-size: 13px;
+                color: #555;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                position: fixed;
+                bottom: 20px;
+                left: 55px;
+            }
+
+            .signup:hover {
+                cursor: pointer;
+                color: #0077b6;
+            }
+
+            .name {
+                color: black;
+                margin: 0;
+                padding: 0;
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                font-weight: 600;
+                font-family: "Inter", sans-serif;
+                font-size: 20px;
+            }
+
+            .navbar {
+                width: 100%;
+                overflow: auto;
+            }
+        </style>
+    </head>
+    <body style="background-color: #e0e7ff">
+        <p class="name">YouWriter</p>
+
+        <div class="login-form">
+            <form method="POST">
+                <h3
+                    style="
+                        font-family: 'Inter', sans-serif;
+                        text-align: center;
+                        font-size: 40px;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                    "
+                >
+                    Login
+                </h3>
+                <input
+                    type="text"
+                    placeholder="Enter Username"
+                    name="username"
+                    class="input-box"
+                    style="margin-bottom: 15px"
+                    required
+                />
+                <input
+                    type="password"
+                    placeholder="Enter Password"
+                    name="password1"
+                    class="input-box"
+                    required
+                />
+                <button type="submit" class="submit">Login</button>
+            </form>
+            <p style="font-family: 'Inter', sans-serif" class="no-account">
+                Don't have an account?
+            </p>
+            <button
+                onclick="window.location.href='sign-up'"
+                style="font-family: 'Inter', sans-serif"
+                class="signup"
+            >
+                Sign Up
+            </button>
+            <! -- link to signup page -- >
+        </div>
+    </body>
+</html>
