@@ -1,70 +1,15 @@
-# Getting Started with Create React App
+# YouWriter 🚀
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Inspiration ✨
+The time-consuming process of watching videos and taking notes can discourage students from retaining knowledge and staying engaged. By creating a notes, bullet point, or essay summary from any YouTube link, YouWrite is an efficient way for students to grasp knowledge from videos.
 
-## Available Scripts
+## What does this app do? ⁉️
+YouWriter converts YouTube videos into short summarizes in hopes of increasing note-taking efficiency for students of all demographics.
 
-In the project directory, you can run:
+## How does it work? 👩‍💻
+- The user is initially directed to a login page, where the user must input an existing username & password. If it is not an existing user, they must create a new account before gaining access to YouWriter. Their personal information is stored within a data storage system to ensure secure user authentication flow using Python, Flask, and MongoDB.
+- When the user is redirected to the landing page, they are given the option to input a YouTube URL, start & end timestamps and to select their form of summary (see picture below). This responsive user interface was created using React and Tailwind CSS.
+  
+![image](https://github.com/yiyan023/YouWriter/assets/56096857/a34bda7d-ddd9-438b-ae68-f75e76087ba2)
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- After the user inputs all their parameters & clicks submit, the video transcript is extracted and converted into a summarized JSON file using Python, Flask, OpenAI. It is then sent back to the client-side where the user can retrieve the summary of this YouTube video.
